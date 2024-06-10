@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"/>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+  <script src="asset/js/bootstrap.min.js"></script>
+  <style>
+    .modal-open-animation {
+      transition: .5;
+      animation: modal-open .5s linear;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1060;     
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      outline: 0;
+    }
+
+    .modal.fade .modal-dialog {
+      transition: transform .3s ease-out;
+      transform: translateY(-50px);
+    }
+    .modal-open-inner {
+      transition: .5;
+      animation: modal-inner .5s linear;
+    }
+    .modal-dialog {
+      max-width: 500px;
+      margin: 14.75rem auto;
+      position: relative;
+      width: auto;
+      /* margin: .5rem; */
+      pointer-events: none;
+    }
+
+    .modal-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      pointer-events: auto;
+      background-color: #fff;
+      background-clip: padding-box;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      outline: 0;
+    }
+
+    .modal-dialog .modal-content .modal-body {
+      text-align: center;
+    }
+    .modal-body {
+      position: relative;
+      flex: 1 1 auto;
+      padding: 1rem;
+    }
+    .modal-dialog .modal-content .modal-body .modal-btn.close {     
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      margin-top: 0;   
+    }
+
+    .modal-dialog .modal-content .modal-body .modal-img-text {
+      padding-top: 24px;
+    }
+    .modal-dialog .modal-content .modal-body .modal-img-text h3 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 125%;
+      letter-spacing: -.32px;
+      color: #000929;
+    }
+
+    .modal-dialog .modal-content .modal-body .modal-btn {
+      margin-top: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .modal-dialog .modal-content .modal-body .modal-btn .no-btn {
+      width: 100px;
+      height: 44px;
+      line-height: 44px;
+      background-color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 145%;
+      letter-spacing: -.09px;
+      color: #000929;
+      border: 1px solid #6c727f;
+      border-radius: 8px;
+      transition: all linear .5s
+    }
+
+    .modal-dialog .modal-content .modal-body .modal-btn .no-btn:hover,.modal-dialog .modal-content .modal-body .modal-btn .yes-btn {
+      background-color: #f01543;
+      color: #fff;
+      border: 1px solid #f01543;
+    }
+  </style>
+</head>
+
+<body>
+  <button type="button" class="logout-btn" id="logout-button">
+    <span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.4" d="M3.83333 0.5H7.16667C9.00762 0.5 10.5 1.99238 10.5 3.83333V12.1667C10.5 14.0076 9.00762 15.5 7.16667 15.5H3.83333C1.99238 15.5 0.5 14.0076 0.5 12.1667V3.83333C0.5 1.99238 1.99238 0.5 3.83333 0.5Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5581 5.05806C12.8021 4.81398 13.1979 4.81398 13.4419 5.05806L15.9419 7.55806C16.186 7.80214 16.186 8.19786 15.9419 8.44194L13.4419 10.9419C13.1979 11.186 12.8021 11.186 12.5581 10.9419C12.314 10.6979 12.314 10.3021 12.5581 10.0581L13.9911 8.625H5.5C5.15482 8.625 4.875 8.34518 4.875 8C4.875 7.65482 5.15482 7.375 5.5 7.375H13.9911L12.5581 5.94194C12.314 5.69786 12.314 5.30214 12.5581 5.05806Z"></path></svg>
+    </span>Logout
+  </button>
+  <div class="modal modal-open-animation fade" id="modal-container">
+    <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.5);"></div>
+    <div class="modal-dialog modal-open-inner ">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-img">
+            <span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_312_69316)"><path d="M77.4976 37.4998H45.8317C44.4517 37.4998 43.3318 36.3799 43.3318 34.9999C43.3318 33.62 44.4517 32.5 45.8317 32.5H77.4976C78.8776 32.5 79.9975 33.62 79.9975 34.9999C79.9975 36.3799 78.8776 37.4998 77.4976 37.4998Z" fill="#F01543"></path><path d="M64.9978 50.0011C64.3576 50.0011 63.718 49.7576 63.2309 49.2681C62.2544 48.291 62.2544 46.7078 63.2309 45.7312L73.9642 34.9985L63.2309 24.2652C62.2544 23.2887 62.2544 21.7055 63.2309 20.729C64.2081 19.7518 65.7913 19.7518 66.7678 20.729L79.2674 33.2286C80.2439 34.2051 80.2439 35.7883 79.2674 36.7648L66.7678 49.2644C66.2777 49.7576 65.6381 50.0011 64.9978 50.0011Z" fill="#F01543"></path><path d="M26.666 80.0014C25.9526 80.0014 25.2757 79.9013 24.5995 79.6914L4.53965 73.0082C1.81025 72.0549 0 69.5116 0 66.6687V6.67057C0 2.99393 2.99002 0.00390625 6.66666 0.00390625C7.37953 0.00390625 8.05639 0.104001 8.73325 0.313955L28.7924 6.9971C31.5225 7.95044 33.3321 10.4937 33.3321 13.3366V73.3347C33.3321 77.0114 30.3427 80.0014 26.666 80.0014ZM6.66666 5.00375C5.74994 5.00375 4.99984 5.75385 4.99984 6.67057V66.6687C4.99984 67.3785 5.47651 68.0383 6.15642 68.2751L26.1222 74.9283C26.2657 74.9747 26.4524 75.0016 26.666 75.0016C27.5828 75.0016 28.3322 74.2515 28.3322 73.3347V13.3366C28.3322 12.6268 27.8556 11.967 27.1757 11.7302L7.20986 5.07699C7.06643 5.0306 6.87967 5.00375 6.66666 5.00375Z" fill="#F01543"></path><path d="M50.8315 26.6699C49.4516 26.6699 48.3316 25.55 48.3316 24.17V9.17049C48.3316 6.87381 46.4622 5.00375 44.1655 5.00375H6.66667C5.28671 5.00375 4.16675 3.88379 4.16675 2.50383C4.16675 1.12387 5.28671 0.00390625 6.66667 0.00390625H44.1655C49.2221 0.00390625 53.3315 4.11388 53.3315 9.17049V24.17C53.3315 25.55 52.2115 26.6699 50.8315 26.6699Z" fill="#F01543"></path><path d="M44.1655 70.002H30.8322C29.4522 70.002 28.3323 68.882 28.3323 67.5021C28.3323 66.1221 29.4522 65.0021 30.8322 65.0021H44.1655C46.4622 65.0021 48.3316 63.1321 48.3316 60.8354V45.8359C48.3316 44.4559 49.4516 43.3359 50.8316 43.3359C52.2115 43.3359 53.3315 44.4559 53.3315 45.8359V60.8354C53.3315 65.892 49.2221 70.002 44.1655 70.002Z" fill="#F01543"></path></g></svg>
+            </span>
+          </div>
+          <div class="modal-img-text">
+            <h3>Are you sure? Logout</h3>
+          </div>
+          <div class="modal-btn">
+            <button type="button" class="no-btn">No!</button>
+            <button type="button" class="no-btn yes-btn">Yes!</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <button type="button" class="btn logout-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.4" d="M3.83333 0.5H7.16667C9.00762 0.5 10.5 1.99238 10.5 3.83333V12.1667C10.5 14.0076 9.00762 15.5 7.16667 15.5H3.83333C1.99238 15.5 0.5 14.0076 0.5 12.1667V3.83333C0.5 1.99238 1.99238 0.5 3.83333 0.5Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5581 5.05806C12.8021 4.81398 13.1979 4.81398 13.4419 5.05806L15.9419 7.55806C16.186 7.80214 16.186 8.19786 15.9419 8.44194L13.4419 10.9419C13.1979 11.186 12.8021 11.186 12.5581 10.9419C12.314 10.6979 12.314 10.3021 12.5581 10.0581L13.9911 8.625H5.5C5.15482 8.625 4.875 8.34518 4.875 8C4.875 7.65482 5.15482 7.375 5.5 7.375H13.9911L12.5581 5.94194C12.314 5.69786 12.314 5.30214 12.5581 5.05806Z"></path></svg>
+    </span>Logout
+  </button>
+
+  <div class="modal modal-open-animation fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.5);"></div>
+    <div class="modal-dialog modal-open-inner">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-btn close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>          
+          <div class="modal-img">
+            <span><svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_312_69316)"><path d="M77.4976 37.4998H45.8317C44.4517 37.4998 43.3318 36.3799 43.3318 34.9999C43.3318 33.62 44.4517 32.5 45.8317 32.5H77.4976C78.8776 32.5 79.9975 33.62 79.9975 34.9999C79.9975 36.3799 78.8776 37.4998 77.4976 37.4998Z" fill="#F01543"></path><path d="M64.9978 50.0011C64.3576 50.0011 63.718 49.7576 63.2309 49.2681C62.2544 48.291 62.2544 46.7078 63.2309 45.7312L73.9642 34.9985L63.2309 24.2652C62.2544 23.2887 62.2544 21.7055 63.2309 20.729C64.2081 19.7518 65.7913 19.7518 66.7678 20.729L79.2674 33.2286C80.2439 34.2051 80.2439 35.7883 79.2674 36.7648L66.7678 49.2644C66.2777 49.7576 65.6381 50.0011 64.9978 50.0011Z" fill="#F01543"></path><path d="M26.666 80.0014C25.9526 80.0014 25.2757 79.9013 24.5995 79.6914L4.53965 73.0082C1.81025 72.0549 0 69.5116 0 66.6687V6.67057C0 2.99393 2.99002 0.00390625 6.66666 0.00390625C7.37953 0.00390625 8.05639 0.104001 8.73325 0.313955L28.7924 6.9971C31.5225 7.95044 33.3321 10.4937 33.3321 13.3366V73.3347C33.3321 77.0114 30.3427 80.0014 26.666 80.0014ZM6.66666 5.00375C5.74994 5.00375 4.99984 5.75385 4.99984 6.67057V66.6687C4.99984 67.3785 5.47651 68.0383 6.15642 68.2751L26.1222 74.9283C26.2657 74.9747 26.4524 75.0016 26.666 75.0016C27.5828 75.0016 28.3322 74.2515 28.3322 73.3347V13.3366C28.3322 12.6268 27.8556 11.967 27.1757 11.7302L7.20986 5.07699C7.06643 5.0306 6.87967 5.00375 6.66666 5.00375Z" fill="#F01543"></path><path d="M50.8315 26.6699C49.4516 26.6699 48.3316 25.55 48.3316 24.17V9.17049C48.3316 6.87381 46.4622 5.00375 44.1655 5.00375H6.66667C5.28671 5.00375 4.16675 3.88379 4.16675 2.50383C4.16675 1.12387 5.28671 0.00390625 6.66667 0.00390625H44.1655C49.2221 0.00390625 53.3315 4.11388 53.3315 9.17049V24.17C53.3315 25.55 52.2115 26.6699 50.8315 26.6699Z" fill="#F01543"></path><path d="M44.1655 70.002H30.8322C29.4522 70.002 28.3323 68.882 28.3323 67.5021C28.3323 66.1221 29.4522 65.0021 30.8322 65.0021H44.1655C46.4622 65.0021 48.3316 63.1321 48.3316 60.8354V45.8359C48.3316 44.4559 49.4516 43.3359 50.8316 43.3359C52.2115 43.3359 53.3315 44.4559 53.3315 45.8359V60.8354C53.3315 65.892 49.2221 70.002 44.1655 70.002Z" fill="#F01543"></path></g></svg>
+            </span>            
+          </div>
+          <div class="modal-img-text">
+            <h3>Are you sure? Logout</h3>
+          </div>
+          <div class="modal-btn">
+            <button type="button" class="no-btn">No!</button>
+            <button type="button" class="no-btn yes-btn">Yes!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const modalContainer = document.getElementById('modal-container');
+  const openModal = document.getElementById('logout-button');
+
+  openModal.addEventListener('click', () => {
+    modalContainer.style.display = 'block';
+    modalContainer.style.background = 'rgba(0,0,0,0.5)';
+    modalContainer.style.position = 'fixed';
+    modalContainer.style.top = '50%';
+    modalContainer.style.left = '50%';
+    modalContainer.style.transform = 'translate(-50%, -50%)';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target === modalContainer) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    modalContainer.style.display = 'none';
+  }
+
+</script>
+</html>

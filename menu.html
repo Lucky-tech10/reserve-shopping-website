@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="styles/tryout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+  <script src="asset/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="header-two">
+
+    <nav class="menu-bg menu-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" style="padding: 0;">
+            <div class="nav-main">
+              <div class="nav-main">
+                <div class="logo">
+                  <a href="#">
+                    <img src="/asset/php/logo-image.jpeg" alt="RevervQ">
+                  </a>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li><a href="#">Home<span><i class="dropdown-toggle"></i></span></a>
+                      <ul>
+                        <li><a href="tryout.html">Home-01</a></li>
+                        <li><a href="#home-two">Home-02</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#">Pages<span><i class="dropdown-toggle"></i></span></a>
+                      <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                        <li><a href="food-details.html">Food Details</a></li>
+                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                        <li><a href="shopping-cart-two.html">Shopping Cart Two</a></li>
+                        <li><a href="shopping-cart-address.html">Cart Address</a></li>
+                        <li><a href="privacy-and-policy.html">Privacy &amp; Policy</a></li>
+                        <li><a href="#terms-service">Terms and Service</a></li>
+                        <li><a href="#trust-safety">Trust And Safety</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="dashboard.html">user dashboard</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="nav-btn-main">
+                <div class="nav-btn-one">
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search food">              
+                  <div class="nav-search">
+                    <button type="submit">
+                      <span>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.25 10.5C19.25 15.3325 15.3325 19.25 10.5 19.25C5.66751 19.25 
+                          1.75 15.3325 1.75 10.5C1.75 5.66751 5.66751 1.75 10.5 1.75C15.3325 1.75 19.25 5.66751 19.25 10.5ZM10.5 20.75C16.1609 
+                          20.75 20.75 16.1609 20.75 10.5C20.75 4.83908 16.1609 0.25 10.5 0.25C4.83908 0.25 0.25 4.83908 0.25 10.5C0.25 16.1609 
+                          4.83908 20.75 10.5 20.75ZM19.5303 18.4697C19.2374 18.1768 18.7626 18.1768 18.4697 18.4697C18.1768 18.7626 18.1768 
+                          19.2374 18.4697 19.5303L20.4696 21.5303C20.7625 21.8232 21.2374 21.8232 21.5303 21.5303C21.8232 21.2374 21.8232 20.7625 
+                          21.5303 20.4696L19.5303 18.4697Z" fill="#4D5461"></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="nav-btn-two">                    
+                  <a href="dashboard.html">
+                    <div class="love">
+                      <span><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.833 7.584C21.1216 7.584 22.1663 8.62867 22.1663 9.91733M13.9997 6.65363L14.7989 5.834C17.285 3.2845 21.3157 3.2845 23.8018 5.834C26.2211 8.31503 26.2954 12.3134 23.9701 14.8872L17.2893 22.2819C15.5145 24.2463 12.4848 24.2463 10.71 22.2819L4.02926 14.8873C1.70392 12.3135 1.77826 8.31506 4.19757 5.83402C6.68365 3.28451 10.7144 3.28452 13.2005 5.83402L13.9997 6.65363Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </span>
+                    </div>
+                  </a>
+                  <div class="love cart js-cart-content" data-text="">
+                    <a class="click" href="shopping-cart.html"></a>
+                    <span><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99967 4.66536H20.9997C23.577 4.66536 25.6663 6.7547 25.6663 9.33203V15.1654C25.6663 17.7427 23.577 19.832 20.9997 19.832H11.6663C9.08901 19.832 6.99967 17.7427 6.99967 15.1654V4.66536ZM6.99967 4.66536C6.99967 3.3767 5.95501 2.33203 4.66634 2.33203H2.33301" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.833 23.918C12.833 24.8845 12.0495 25.668 11.083 25.668C10.1165 25.668 9.33301 24.8845 9.33301 23.918C9.33301 22.9515 10.1165 22.168 11.083 22.168C12.0495 22.168 12.833 22.9515 12.833 23.918Z" stroke-width="1.5"></path><path d="M23.333 23.918C23.333 24.8845 22.5495 25.668 21.583 25.668C20.6165 25.668 19.833 24.8845 19.833 23.918C19.833 22.9515 20.6165 22.168 21.583 22.168C22.5495 22.168 23.333 22.9515 23.333 23.918Z" stroke-width="1.5"></path><path d="M16.333 9.33203L16.333 15.1654" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19.2503 12.25L13.417 12.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </span>
+                    <div class="cart-dropdown header-dropdown active-dropdown">
+                      <div class="cart-dropdown-text">
+                        <div class="text">
+                          <h3>My Cart</h3>
+                        </div>
+                        <div class="cart-dropdown-btn">
+                          <button type="button" class="close-btn">
+                            <span><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.24309 0.757865L0.757812 9.24315M9.24309 9.24309L0.757812 0.757812" stroke="#9EA3AE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="cart-dropdown-btn-two">
+                        <a class=" cart-btn-two " href="#shopping-cart">
+                          <span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6665 15.8333V5.83333M11.6665 15.8333H13.3332M11.6665 15.8333H7.49984M11.6665 5.83333C11.6665 3.99238 10.1741 2.5 8.33317 2.5H4.99984C3.15889 2.5 1.6665 3.99238 1.6665 5.83333V12.5C1.6665 14.0544 2.73039 15.3602 4.16971 15.7291M11.6665 5.83333H14.3408C14.7642 5.83333 15.1718 5.9945 15.4807 6.2841L17.8064 8.46449C18.1425 8.77957 18.3332 9.2197 18.3332 9.68039V14.1667C18.3332 15.0871 17.587 15.8333 16.6665 15.8333M16.6665 15.8333C16.6665 16.7538 15.9203 17.5 14.9998 17.5C14.0794 17.5 13.3332 16.7538 13.3332 15.8333M16.6665 15.8333C16.6665 14.9129 15.9203 14.1667 14.9998 14.1667C14.0794 14.1667 13.3332 14.9129 13.3332 15.8333M7.49984 15.8333C7.49984 16.7538 6.75365 17.5 5.83317 17.5C4.9127 17.5 4.1665 16.7538 4.1665 15.8333C4.1665 15.7983 4.16758 15.7636 4.16971 15.7291M7.49984 15.8333C7.49984 14.9129 6.75365 14.1667 5.83317 14.1667C4.94769 14.1667 4.22349 14.8572 4.16971 15.7291" stroke-width="1.5"></path><path d="M8.33317 6.66797L6.6665 6.66797" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.33333 10L5 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+                          Delivery
+                        </a>
+                      </div>
+                      <div class="js-cart-dropdown">
+                        <!-- <div class="cart-dropdown-item-box">
+                          <div class="cart-dropdown-item">
+                            <div class="cart-dropdown-item-img">
+                              <img src="/asset/php/eggplant.png">
+                            </div>
+                            <div class="cart-dropdown-item-text">
+                              <h3>Eggplant Baked with Cheese</h3>
+                              <p>$30.00</p>
+                            </div>
+                          </div>
+                          <div class="cart-dropdown-inner">
+                            <div class="cart-dropdown-inner-btn">
+                              <a href="#">
+                                <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 6V13.5C3.75 15.1569 5.09315 16.5 6.75 16.5H11.25C12.9069 16.5 14.25 15.1569 14.25 13.5V6M10.5 8.25V12.75M7.5 8.25L7.5 12.75M12 3.75L10.9453 2.16795C10.6671 1.75065 10.1988 1.5 9.69722 1.5H8.30278C7.80125 1.5 7.3329 1.75065 7.0547 2.16795L6 3.75M12 3.75H6M12 3.75H15.75M6 3.75H2.25" stroke="#F01543" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="cart-dropdown-inner-btn cart-dropdown-inner-btn-two ">
+                              <input type="email" class="form-control" id="exampleFormControlInput2" value="100">
+                            </div>
+                            <div class="cart-dropdown-inner-btn">
+                              <a href="#">
+                                <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V13.5M13.5 9L4.5 9" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cart-dropdown-item-box">
+                          <div class="cart-dropdown-item">
+                            <div class="cart-dropdown-item-img">
+                              <img src="/asset/php/roasted-steak.png">
+                            </div>
+                            <div class="cart-dropdown-item-text">
+                              <h3>Roasted Steak with Garnish</h3>
+                              <p>$30.00</p>
+                            </div>
+                          </div>
+                          <div class="cart-dropdown-inner">
+                            <div class="cart-dropdown-inner-btn">
+                              <a href="#">
+                                <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 6V13.5C3.75 15.1569 5.09315 16.5 6.75 16.5H11.25C12.9069 16.5 14.25 15.1569 14.25 13.5V6M10.5 8.25V12.75M7.5 8.25L7.5 12.75M12 3.75L10.9453 2.16795C10.6671 1.75065 10.1988 1.5 9.69722 1.5H8.30278C7.80125 1.5 7.3329 1.75065 7.0547 2.16795L6 3.75M12 3.75H6M12 3.75H15.75M6 3.75H2.25" stroke="#F01543" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                            <div class="cart-dropdown-inner-btn cart-dropdown-inner-btn-two ">
+                              <input type="email" class="form-control" id="exampleFormControlInput2" value="100">
+                            </div>
+                            <div class="cart-dropdown-inner-btn">
+                              <a href="#">
+                                <span><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5V13.5M13.5 9L4.5 9" stroke="#28303F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>                         -->
+                      </div>
+                      <div class="cart-dropdown-sub-total">
+                        <div class="cart-dropdown-sub-total-item">
+                          <div class="text">
+                            <h3>Subtotal</h3>
+                          </div>
+                          <div class="text">
+                            <h3><a href="#">$30</a></h3>
+                          </div>
+                        </div>
+                        <div class="cart-dropdown-sub-total-btn">
+                          <a class="main-btn-four" href="#shopping-cart">Proceed to Checkout</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                    
+                </div>                                  
+              </div>
+              <div class=" nav-login-btn-main">
+                <a class="main-btn-four" href="login.html">Log In</a>
+                <a class="main-btn" href="register.html">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="inner-banner menu-page">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+          <div class="inner-banner-head">
+            <h1>All Food Menu</h1>
+          </div>
+          <div class="inner-banner-item">
+            <div class="left">
+              <a href="tryout.html">Home</a>
+            </div>
+            <div class="icon">
+              <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 7L14 12L10 17" stroke="#E5E6EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            </div>
+            <div class="left">
+              <span>Food Details</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="food-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="food-details-btn-box">
+            <div class="food-details-btn-box-item">
+              <div class="food-details-btn-item">
+                <div class="food-details-btn-btn">
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " role="button" title="drop" href="#all-food" data-bs-toggle="dropdown" aria-expanded="false">
+                      All Category
+                      <span class="pl-8px" title="drop"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36234)"><path d="M3.33398 5.66797L8.00065 10.3346L12.6673 5.66797" stroke="#6C727F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="food-details-btn-btn">
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " role="button" title="drop" href="#all-food" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="p-r-6px">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36238)"><path d="M6.68919 2.17964C7.22565 1.0495 8.77565 1.04949 9.31211 2.17964L10.2392 4.13282C10.4523 4.5816 10.8641 4.89266 11.3404 4.96462L13.4135 5.27783C14.6131 5.45905 15.0921 6.99173 14.2241 7.87142L12.7239 9.39176C12.3792 9.74109 12.222 10.2444 12.3033 10.7376L12.6575 12.8844C12.8624 14.1265 11.6084 15.0738 10.5355 14.4873L8.6812 13.4738C8.25515 13.2409 7.74615 13.2409 7.3201 13.4738L5.46583 14.4873C4.39291 15.0738 3.13893 14.1265 3.34384 12.8844L3.69798 10.7376C3.77935 10.2444 3.62206 9.74109 3.27737 9.39176L1.77723 7.87142C0.909228 6.99173 1.3882 5.45905 2.58776 5.27783L4.6609 4.96462C5.13724 4.89266 5.54903 4.5816 5.76206 4.13282L6.68919 2.17964Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                      Star Rating
+                      <span class="pl-8px" title="drop">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36234)"><path d="M3.33398 5.66797L8.00065 10.3346L12.6673 5.66797" stroke="#6C727F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="food-details-btn-btn">
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " role="button" title="drop" href="#all-food" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="p-r-6px">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36238)"><path d="M6.68919 2.17964C7.22565 1.0495 8.77565 1.04949 9.31211 2.17964L10.2392 4.13282C10.4523 4.5816 10.8641 4.89266 11.3404 4.96462L13.4135 5.27783C14.6131 5.45905 15.0921 6.99173 14.2241 7.87142L12.7239 9.39176C12.3792 9.74109 12.222 10.2444 12.3033 10.7376L12.6575 12.8844C12.8624 14.1265 11.6084 15.0738 10.5355 14.4873L8.6812 13.4738C8.25515 13.2409 7.74615 13.2409 7.3201 13.4738L5.46583 14.4873C4.39291 15.0738 3.13893 14.1265 3.34384 12.8844L3.69798 10.7376C3.77935 10.2444 3.62206 9.74109 3.27737 9.39176L1.77723 7.87142C0.909228 6.99173 1.3882 5.45905 2.58776 5.27783L4.6609 4.96462C5.13724 4.89266 5.54903 4.5816 5.76206 4.13282L6.68919 2.17964Z" stroke="#28303F" stroke-width="1.5" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                      Price Range
+                      <span class="pl-8px" title="drop">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36234)"><path d="M3.33398 5.66797L8.00065 10.3346L12.6673 5.66797" stroke="#6C727F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="food-details-btn-btn">
+                  <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " role="button" title="drop" href="#all-food" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="p-r-6px"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.75" y="3.75" width="10.5" height="10.5" rx="4" stroke="#28303F"></rect><path d="M9 6.75V9L7.5 9.75" stroke="#28303F" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.75 14.25L12.75 14.5C12.75 15.6046 11.8546 16.5 10.75 16.5L7.25 16.5C6.14543 16.5 5.25 15.6046 5.25 14.5L5.25 14.25" stroke="#28303F" stroke-linecap="square"></path><path d="M12.75 3.75L12.75 3.5C12.75 2.39543 11.8546 1.5 10.75 1.5L7.25 1.5C6.14543 1.5 5.25 2.39543 5.25 3.5L5.25 3.75" stroke="#28303F" stroke-linecap="square"></path></svg>
+                      </span>
+                      Meal Type
+                      <span class="pl-8px" title="drop"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_304_36234)"><path d="M3.33398 5.66797L8.00065 10.3346L12.6673 5.66797" stroke="#6C727F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+                      </span>
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="food-details-btn-search-box">
+                <input type="email" class="form-control" id="exampleFormControlInput7" placeholder="Enter keyword here">
+                <div class="food-details-btn-search-btn">
+                  <a href="#" class="icon">
+                    <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 18.5L22 22M21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21C16.7467 21 21 16.7467 21 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="food-details-btn-box-right-btn">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" href="/all-food" style="display: flex; justify-content: center; align-items: center;">
+                    <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.34857 0H2.96329C1.32953 0 0 1.32953 0 2.96329V8.34791C0 9.98167 1.32953 11.3112 2.96329 11.3112H8.34791C9.98167 11.3112 11.3112 9.98167 11.3112 8.34791V2.96329C11.3119 1.32953 9.98233 0 8.34857 0ZM9.33633 8.34857C9.33633 8.89316 8.89316 9.33633 8.34857 9.33633H2.96329C2.4187 9.33633 1.97553 8.89316 1.97553 8.34857V2.96395C1.97553 2.41936 2.4187 1.97618 2.96329 1.97618H8.34791C8.8925 1.97618 9.33567 2.41936 9.33567 2.96395L9.33633 8.34857ZM21.6715 0H16.2862C14.6525 0 13.3229 1.32953 13.3229 2.96329V8.34791C13.3229 9.98167 14.6525 11.3112 16.2862 11.3112H21.6715C23.3053 11.3112 24.6348 9.98167 24.6348 8.34791V2.96329C24.6348 1.32953 23.3059 0 21.6715 0ZM22.6593 8.34857C22.6593 8.89316 22.2161 9.33633 21.6715 9.33633H16.2862C15.7416 9.33633 15.2985 8.89316 15.2985 8.34857V2.96395C15.2985 2.41936 15.7416 1.97618 16.2862 1.97618H21.6715C22.2161 1.97618 22.6593 2.41936 22.6593 2.96395V8.34857ZM8.34857 12.6888H2.96329C1.32953 12.6888 0 14.0183 0 15.6521V21.0367C0 22.6705 1.32953 24 2.96329 24H8.34791C9.98167 24 11.3112 22.6705 11.3112 21.0367V15.6521C11.3119 14.0177 9.98233 12.6888 8.34857 12.6888ZM9.33633 21.0367C9.33633 21.5813 8.89316 22.0245 8.34857 22.0245H2.96329C2.4187 22.0245 1.97553 21.5813 1.97553 21.0367V15.6521C1.97553 15.1075 2.4187 14.6643 2.96329 14.6643H8.34791C8.8925 14.6643 9.33567 15.1075 9.33567 15.6521L9.33633 21.0367ZM21.6715 12.6888H16.2862C14.6525 12.6888 13.3229 14.0183 13.3229 15.6521V21.0367C13.3229 22.6705 14.6525 24 16.2862 24H20.3097C20.855 24 21.2975 23.5575 21.2975 23.0122C21.2975 22.467 20.855 22.0245 20.3097 22.0245H16.2862C15.7416 22.0245 15.2985 21.5813 15.2985 21.0367V15.6521C15.2985 15.1075 15.7416 14.6643 16.2862 14.6643H21.6715C22.2161 14.6643 22.6593 15.1075 22.6593 15.6521V20.1655C22.6593 20.7108 23.1018 21.1533 23.647 21.1533C24.1923 21.1533 24.6348 20.7108 24.6348 20.1655V15.6521C24.6348 14.0177 23.3059 12.6888 21.6715 12.6888Z"></path></svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link " href="/all-food/list" style="display: flex; justify-content: center; align-items: center;">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade-show show-active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row js-products-row">
+          <!-- <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img-populer w-full">
+                <img src="/asset/php/popular.png">
+              </div>
+              <div class="featured-item-img">
+                <img src="/asset/php/pork-chop-2.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$18</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Pork Chop with Apple Chutney</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="asset/php/eggplant.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$40</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Eggplant Parmesan &amp; Linguine</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/fish-tacos.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$30</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Fish Tacos with Chipotle Crema</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/quinoa.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$30</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Quinoa-Stuffed Bell Pepper</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/baked-chicken.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$30</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Baked Chicken Wings and Legs</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/fish-tacos.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$30</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Fish Tacos with Chipotle Crema</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img-populer w-full">
+                <img src="/asset/php/popular.png">
+              </div>
+              <div class="featured-item-img">
+                <img src="/asset/php/quinoa.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$18</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Quinoa-Stuffed Bell Pepper</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/bbq.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$40</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Baked Chicken Wings and Legs</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shaf-item mb-4 col-lg-4 col-md-6 featured-item-mt">
+            <div class="featured-item">
+              <div class="featured-item-img">
+                <img src="/asset/php/pork-chop.png">
+                <div class="featured-item-img-overlay">
+                  <div class="featured-item-img-over-text">
+                    <div class="left-text">
+                      <div class="icon">
+                        <span></span>
+                      </div>
+                    </div>
+                    <div class="right-text">
+                      <h5>20% Off</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="featured-item-text">
+                <div class="text-item">
+                  <div class="left">
+                    <h3>$30</h3>
+                  </div>
+                  <div class="right">
+                    <div class="icon">
+                      <span><img src="/asset/php/star.jpeg" alt=""></span>
+                    </div>
+                    <h5> 4.7(2.5K)</h5>
+                  </div>
+                </div>
+                <div class="text-item-center">
+                  <h3><a href="#all-food">Fish Tacos with Chipotle Crema</a>
+                  </h3>
+                </div>
+                <div class="text-item-center-item-box">
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>4 Piece Chicken</h5>
+                    </div>
+                  </div>
+                  <div class="text-item-center-item">
+                    <div class="icon">
+                      <span></span>
+                    </div>
+                    <div class="text">
+                      <h5>Spicy Sauce</h5>
+                    </div>
+                  </div>
+                  <div class="featured-item-btn">
+                    <a class="main-btn-three" href="#shopping-cart">
+                      <span><img src="asset/php/add-to-cart-icon.jpeg" alt=""></span>
+                      Add to Cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="row blog-mt-48px">
+        <div class="col-lg-7 col-md-6">
+          <div class="next-prev-btn">
+            <ul>
+              <li>
+                <a href="#">
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 8L6 12M6 12L10 16M6 12L18 12" stroke="#F01543" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="active">Next Page
+                  <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 16L18 12M18 12L14 8M18 12L6 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#">Page</a>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">2</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">of 10</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="scripts/menu.js"></script>
+</body>
+</html>
